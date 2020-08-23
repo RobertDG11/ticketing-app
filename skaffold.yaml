@@ -1,0 +1,18 @@
+apiVersion: skaffold/v2beta3
+kind: Config
+deploy:
+  kubectl:
+    manifests:
+      - ./infrastructure/kubernetes/*
+build:
+  local:
+    push: false
+  artifacts:
+    - image: robertdg11/auth
+      context: auth
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: 'src/**/*.ts'
+            dest: .
