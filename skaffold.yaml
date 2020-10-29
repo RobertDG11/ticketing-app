@@ -4,6 +4,7 @@ deploy:
   kubectl:
     manifests:
       - ./infrastructure/kubernetes/*
+      - ./infrastructure/kubernetes-dev/*
 build:
   local:
     push: false
