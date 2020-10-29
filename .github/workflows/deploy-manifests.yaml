@@ -5,7 +5,7 @@ on:
     branches: 
       - master
     paths:
-      - './infrastructure/**'
+      - 'infrastructure/**'
         
 jobs:
   build: 
